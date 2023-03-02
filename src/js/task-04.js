@@ -9,7 +9,8 @@
  incrementBtn.addEventListener('click', onincrementBtnClick);
 
  function ondecrementBtnClick () {
-    counterValue -= 1;
+   
+    counterValue = counterValue - 1;
     valueCount.textContent = counterValue;
  }
 

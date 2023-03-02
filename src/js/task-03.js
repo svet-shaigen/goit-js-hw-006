@@ -15,9 +15,25 @@ const images = [
 
 const ul = document.querySelector('.gallery')
 
-const markup = images.map((item) => `<li class="gallery__item"><img class="gallery__img" src='${item.url}'
- alt='${item.alt}' width=50%></li>`).join('');
+// const markup = images.map((item) => `<li class="gallery__item"><img class="gallery__img" src='${item.url}'
+//  alt='${item.alt}' width=50%></li>`).join('');
 
-ul.insertAdjacentHTML('afterbegin', markup);
+const arrayImage = [];
+images.map(image => {
+  // console.log(image)
+  const card = `
+  <li>
+    <img src='${image.url}' alt='${image.alt}' width=50% >
+  </li>
+  `
+  arrayImage.push(card)
+  // console.log(card)
+})
+
+console.log(arrayImage.join(''))
+
+
+
+ul.insertAdjacentHTML('afterbegin', arrayImage.join(''));
 
 

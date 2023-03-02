@@ -1,10 +1,12 @@
 const inputField = document.querySelector('#validation-input');
 
-const trueValue = Number(inputField.dataset.length);
+const trueValue = Number(inputField.dataset.length1);
 
+inputField.addEventListener('blur', inputBlurHandler);
 
-//inputField.addEventListener('blur', () => {
-    const inputBlurHandler = () => {
+function inputBlurHandler () {
+    console.log(inputField.value.length)
+    console.log(trueValue)
     if (inputField.value.length === trueValue) {
         inputField.classList.remove('invalid')
         inputField.classList.add('valid')
@@ -16,4 +18,3 @@ const trueValue = Number(inputField.dataset.length);
 
 
 
-inputField.addEventListener('blur', inputBlurHandler);

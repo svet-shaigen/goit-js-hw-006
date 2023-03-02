@@ -5,12 +5,12 @@ formEl.addEventListener('submit', formSubmitHundler);
 function formSubmitHundler(event) {
    event.preventDefault()
 
-   const emailValue = event.currentTarget.email.value;
-   const passwordValue = event.currentTarget.password.value;
-   console.log(event.currentTarget.email.value);
-   if(!emailValue || !passwordValue) {
+   const email = event.currentTarget.email.value;
+   const password = event.currentTarget.password.value;
+   
+   if(!email || !password) {
       return alert('Попередження: всі поля повинні бути заповнені!');
    }
-   console.log({emailValue, passwordValue});
+   console.log({email, password});
    formEl.reset();
 }
